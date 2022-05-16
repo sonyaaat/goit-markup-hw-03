@@ -7,6 +7,7 @@
   --background-accent: #2f303a;
   --background-grey: #f5f4fa;
   --grey: rgba(255, 255, 255, 0.6);
+  --border: #ececec;
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -35,9 +36,9 @@ ul {
 
 .container {
   margin: 0 auto;
-  width: 1230px;
-  padding-left: 15px;
-  padding-right: 15px;
+  width: 1170px;
+  /* padding-left: 15px;
+  padding-right: 15px; */
 }
 /* Секції */
 .section-padding {
@@ -53,10 +54,14 @@ ul {
   padding-top: 94px;
 }
 /* Header */
+.header {
+  border-bottom: 1px solid var(--border);
+}
 .header-container {
   margin-top: 24px;
   margin-bottom: 25px;
 }
+
 .logo {
   margin-right: 93px;
 
@@ -81,10 +86,13 @@ ul {
 .header-list > li:last-child {
   margin-right: auto;
 }
+.header-list .link {
+  padding-bottom: 32px;
+  padding-top: 32px;
+}
 .header-contacts {
   display: flex;
   align-items: center;
-  margin-left: 331px;
 }
 .header-contacts > li:not(:last-child) {
   margin-right: 50px;
@@ -92,6 +100,7 @@ ul {
 
 .header-container {
   display: flex;
+  justify-content: space-between;
 }
 .nav {
   display: flex;
@@ -127,7 +136,7 @@ ul {
   text-align: center;
 }
 .hero-title {
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 
   font-weight: 900;
   font-size: 44px;
@@ -223,8 +232,6 @@ ul {
   letter-spacing: 0.03em;
 }
 .team-text {
-  padding-bottom: 30px;
-
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
@@ -233,7 +240,7 @@ ul {
 
 .team-icon {
   width: 270px;
-
+  padding-bottom: 30px;
   text-align: center;
   background-color: var(--main-background);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -255,7 +262,7 @@ footer {
   padding-bottom: 60px;
 }
 .logo-bottom {
-  display: inline-block;
+  display: block;
   margin-bottom: 20px;
 }
 .footer-link {
@@ -267,7 +274,8 @@ footer {
   letter-spacing: 0.03em;
   color: var(--grey);
 }
-footer-list:not(:last-child) {
+.footer-link {
+  display: inline-block;
   margin-bottom: 9px;
 }
 
@@ -304,12 +312,14 @@ button:focus {
   background-color: var(--accent-text);
 }
 .buttons {
-  margin-bottom: 34px;
+  margin-bottom: 50px;
   display: flex;
   justify-content: center;
 }
 .button {
   padding: 6px 22px;
+}
+.buttons > li {
   margin-right: 8px;
 }
 
@@ -327,9 +337,11 @@ button:focus {
 }
 .portfolio-item:nth-child(3n) {
   margin-right: 0px;
+  padding-right: 0px;
 }
 .portfolio-item:nth-last-child(-n + 3) {
-  margin-bottom: 0;
+  margin-bottom: 0px;
+  padding-right: 0px;
 }
 .portfolio-header {
   margin-left: 24px;
